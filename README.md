@@ -94,7 +94,7 @@ new MyModel();
 By default, `attachDeps` **will not overwrite existing properties**, but
 it will still enforce that they're provided in the options object. This
 behavior works well with classes that already attach options for you
-automattically (such as the `model` or `collection` options with
+automatically (such as the `model` or `collection` options with
 Backbone.View,) but where you still want to enforce that a given option has
 been supplied.
 
