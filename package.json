@@ -1,0 +1,16 @@
+{
+  "name": "ampersand-dependency-mixin",
+  "version": "0.0.1",
+  "dependencies": {
+    "lodash.compact": "^2.4.1",
+    "lodash.isfunction": "^2.4.1",
+    "lodash.map": "^2.4.1"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^2.13.3"
+  },
+  "scripts": {
+    "test": "node test/main | faucet"
+  }
+}
