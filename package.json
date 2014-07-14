@@ -1,6 +1,7 @@
 {
   "name": "ampersand-dependency-mixin",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "description": "A mixin the provides dependency injection for Ampersand.js",
   "dependencies": {
     "lodash.compact": "^2.4.1",
     "lodash.isfunction": "^2.4.1",
@@ -12,5 +13,23 @@
   },
   "scripts": {
     "test": "node test/main | faucet"
-  }
+  },
+  "main": "ampersand-dependency-mixin.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wookiehangover/ampersand-dependency-mixin.git"
+  },
+  "keywords": [
+    "ampersand",
+    "dependency"
+  ],
+  "author": "Sam Breed <sam@quickleft.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wookiehangover/ampersand-dependency-mixin/issues"
+  },
+  "homepage": "https://github.com/wookiehangover/ampersand-dependency-mixin"
 }
