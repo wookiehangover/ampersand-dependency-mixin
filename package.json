@@ -1,7 +1,7 @@
 {
   "name": "ampersand-dependency-mixin",
-  "version": "0.1.0",
-  "description": "A mixin that provides dependency injection for Ampersand.js",
+  "version": "0.1.1",
+  "description": "A mixin that provides dependency injection for Ampersand.js and Backbone",
   "dependencies": {
     "lodash.compact": "^2.4.1",
     "lodash.isfunction": "^2.4.1",
@@ -24,7 +24,8 @@
   },
   "keywords": [
     "ampersand",
-    "dependency"
+    "dependency",
+    "backbone"
   ],
   "author": "Sam Breed <sam@quickleft.com>",
   "license": "MIT",
