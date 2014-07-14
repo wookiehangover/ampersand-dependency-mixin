@@ -2,6 +2,8 @@
 
 > A mixin the provides dependency injection for [Ampersand.js](http://ampersandjs.com/).
 
+Based on a talk I presented at [Backbone Conf](https://www.youtube.com/watch?v=Lm05e5sJaE8).
+
 ## Usage
 
 Install with npm:
@@ -10,7 +12,7 @@ Install with npm:
 $ npm install --save ampersand-dependency-mixin
 ```
 
-Extend into a constructor:
+Extend the mixin into a constructor:
 
 ```javascript
 var deps = require('ampersand-dependency-mixin');
@@ -73,6 +75,9 @@ var BaseModel = Model.extend(deps, {
   }
 });
 
+new BaseModel();
+// -> Error: 'Missing required dependencies: `config`'
+
 var MyModel = BaseModel.extend({
   dependencies: function() {
     var baseDeps = BaseModel.prototype.dependencies.call(this);
@@ -82,4 +87,34 @@ var MyModel = BaseModel.extend({
 
 new MyModel();
 // -> Error: 'Missing required dependencies: `config`, `user`'
+```
+
+### Overwriting properties
+
+By default, `attachDeps` **will not overwrite existing properties**, but
+it will still enforce that they're provided in the options object. This
+behavior works well with classes that already attach options for you
+automattically (such as the `model` or `collection` options with
+Backbone.View,) but where you still want to enforce that a given option has
+been supplied.
+
+Use the `overwrite: true` option to overwrite any pre-existing values:
+
+```javascript
+var UserModel = View.extend({
+  dependencies: ['config'],
+
+  config: { apiKey: 123 },
+
+  initialize: function(options) {
+    this.attachDeps(options, { overwrite: true });
+  }
+});
+
+var view = new UserModel({
+  config: { apiKey: 321 }
+});
+
+view.config
+// -> { apiKey: 321 }
 ```
