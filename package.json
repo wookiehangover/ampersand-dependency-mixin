@@ -1,7 +1,7 @@
 {
   "name": "ampersand-dependency-mixin",
   "version": "0.1.0",
-  "description": "A mixin the provides dependency injection for Ampersand.js",
+  "description": "A mixin that provides dependency injection for Ampersand.js",
   "dependencies": {
     "lodash.compact": "^2.4.1",
     "lodash.isfunction": "^2.4.1",
