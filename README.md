@@ -40,7 +40,7 @@ model.config
 // -> { ... }
 
 var shouldThrow = new MyModel();
-// -> Error: 'Missing required dependencies: `model`'
+// -> Error: 'Missing required dependencies: `config`'
 ```
 
 ### Custom Error Messages
