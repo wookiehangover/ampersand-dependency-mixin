@@ -1,6 +1,6 @@
 # ampersand-dependency-mixin
 
-> A mixin that provides dependency injection for [Ampersand.js](http://ampersandjs.com/) and [Backbone](http://backbonejs.org).
+> A mixin that provides dependency management for [Ampersand.js](http://ampersandjs.com/) and [Backbone](http://backbonejs.org).
 
 Based on a talk I presented at [Backbone Conf](https://www.youtube.com/watch?v=Lm05e5sJaE8).
 
