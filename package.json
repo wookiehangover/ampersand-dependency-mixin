@@ -8,11 +8,15 @@
     "lodash.map": "^2.4.1"
   },
   "devDependencies": {
+    "browserify": "^4.2.1",
     "faucet": "0.0.1",
-    "tape": "^2.13.3"
+    "tape": "^2.13.3",
+    "uglify-js": "^2.4.15"
   },
   "scripts": {
-    "test": "node test/main | faucet"
+    "test": "node test/main | faucet",
+    "build": "browserify ampersand-dependency-mixin.js --standalone dependencyMixin -o dist/ampersand-dependency-mixin.js && npm run minify",
+    "minify": "cat dist/ampersand-dependency-mixin.js | uglifyjs -cm > dist/ampersand-dependency-mixin.min.js"
   },
   "main": "ampersand-dependency-mixin.js",
   "directories": {
