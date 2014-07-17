@@ -1,0 +1,26 @@
+{
+  "name": "ampersand-dependency-mixin",
+  "main": "dist/ampersand-dependency-mixin.js",
+  "version": "0.1.2",
+  "homepage": "https://github.com/wookiehangover/ampersand-dependency-mixin",
+  "authors": [
+    "Sam Breed <sam@quickleft.com>"
+  ],
+  "description": "A mixin that provides dependency management for Ampersand.js and Backbone",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "ampersand"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
