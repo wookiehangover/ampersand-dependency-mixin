@@ -31,9 +31,9 @@ test('attachDeps', function(t) {
   });
   t.throws(
     function() {
-      new SingleDep();
+      throw new SingleDep();
     },
-    'Missing required dependencies: `model`',
+    /Missing required dependencies: `model`$/,
     'should throw an error'
   );
 
@@ -47,14 +47,14 @@ test('attachDeps', function(t) {
     function() {
       new MultipleDeps();
     },
-    'Missing required dependencies: `model`, `config`',
+    /Missing required dependencies: `model`, `config`$/,
     'should throw an error message with the missing deps'
   );
   t.throws(
     function() {
       new MultipleDeps({ model: 'foo' });
     },
-    'Missing required dependencies: `config`',
+    /Missing required dependencies: `config`$/,
     'should throw an error message with the missing deps (partial message)'
   );
 
@@ -78,7 +78,7 @@ test('attachDeps: custom error messages', function(t) {
     function() {
       new CustomMsg();
     },
-    'Missing required dependencies: User Model',
+    /Missing required dependencies: User Model$/,
     'should throw an error with a custom message'
   );
 
@@ -97,7 +97,7 @@ test('attachDeps: custom error messages', function(t) {
     function() {
       new MultiCustomMsg();
     },
-    'Missing required dependencies: User Model, App Config',
+    /Missing required dependencies: User Model, App Config$/,
     'should throw a custom error message'
   );
 
@@ -121,7 +121,7 @@ test('attachDeps: dependencies function', function(t) {
     function() {
       new FnSingleDep();
     },
-    'Missing required dependencies: `model`',
+    /Missing required dependencies: `model`$/,
     'should throw an error'
   );
 

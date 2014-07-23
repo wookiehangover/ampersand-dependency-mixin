@@ -33,7 +33,7 @@ exports.attachDeps = function(params, options) {
   if (errors.length > 0) {
     throw new Error([
       'Missing required dependencies:',
-      errors.length === 1 ? errors[1] : errors.join(', ')
+      errors.join(', ')
     ].join(' '));
   }
 };
