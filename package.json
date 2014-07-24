@@ -1,6 +1,6 @@
 {
   "name": "ampersand-dependency-mixin",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "A mixin that provides dependency management for Ampersand.js and Backbone",
   "dependencies": {
     "lodash.compact": "^2.4.1",
@@ -11,10 +11,12 @@
     "browserify": "^4.2.1",
     "faucet": "0.0.1",
     "tape": "^2.13.3",
+    "testling": "^1.7.0",
     "uglify-js": "^2.4.15"
   },
   "scripts": {
     "test": "node test/main | faucet",
+    "test-browser": "testling | faucet",
     "build": "browserify ampersand-dependency-mixin.js --standalone dependencyMixin -o dist/ampersand-dependency-mixin.js && npm run minify",
     "minify": "cat dist/ampersand-dependency-mixin.js | uglifyjs -cm > dist/ampersand-dependency-mixin.min.js"
   },
@@ -40,17 +42,7 @@
   "testling": {
     "files": "test/main.js",
     "browsers": [
-      "ie/8..latest",
-      "firefox/17..latest",
-      "firefox/nightly",
-      "chrome/22..latest",
-      "chrome/canary",
-      "opera/12..latest",
-      "opera/next",
-      "safari/5.1..latest",
-      "ipad/6.0..latest",
-      "iphone/6.0..latest",
-      "android-browser/4.2..latest"
+      "firefox/latest"
     ]
   }
 }

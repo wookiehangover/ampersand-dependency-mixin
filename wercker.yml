@@ -1,0 +1,15 @@
+box: dignifiedquire/node-firefox-headless
+
+build:
+  steps:
+    - npm-install
+    - npm-test
+    - script:
+        name: setup headless Firefox
+        code: |
+          export DISPLAY=:99.0
+          sh -e /etc/init.d/xvfb start
+    - script:
+        name: run browser tests
+        code: |
+          npm run test-browser
