@@ -4,6 +4,8 @@
 
 Based on a talk I presented at [Backbone Conf](https://www.youtube.com/watch?v=Lm05e5sJaE8).
 
+[![wercker status](https://app.wercker.com/status/14f8207b46746c5cb4a0432ff72018e0/m "wercker status")](https://app.wercker.com/project/bykey/14f8207b46746c5cb4a0432ff72018e0)
+
 ## Usage
 
 Install with npm:
