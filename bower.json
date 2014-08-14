@@ -1,7 +1,7 @@
 {
   "name": "ampersand-dependency-mixin",
   "main": "dist/ampersand-dependency-mixin.js",
-  "version": "0.1.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/wookiehangover/ampersand-dependency-mixin",
   "authors": [
     "Sam Breed <sam@quickleft.com>"

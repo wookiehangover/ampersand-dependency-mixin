@@ -1,6 +1,6 @@
 {
   "name": "ampersand-dependency-mixin",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A mixin that provides dependency management for Ampersand.js and Backbone",
   "dependencies": {
     "lodash.compact": "^2.4.1",
